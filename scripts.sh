@@ -2,7 +2,7 @@
  # @Author: clingxin
  # @Date: 2021-05-26 17:28:51
  # @LastEditors: clingxin
- # @LastEditTime: 2021-05-26 17:32:26
+ # @LastEditTime: 2021-05-26 20:09:30
  # @FilePath: /minikube-spark/scripts.sh
 ###
 #start and enable dashboard
@@ -11,6 +11,7 @@ minikube status
 minikube addons enable dashboard
 minikube dashboard
 #check minikube status and create a namespace
+kubetcl cluster-info --context minikube
 kubectl get nodes
 kubectl create namespace spark
 #install and add repo in helm, install spark in minikube in spark namespace
